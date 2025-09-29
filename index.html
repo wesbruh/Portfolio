@@ -7,52 +7,66 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
     </head>
     <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="IconsAndImages/logo.png" class="logo"> 
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-text">
-                    <h1>Hi, I'm <span>Westley</span> Valentin</h1>
-                    <h2>Computer Science <br> California State University, Sacramento</h2>
+        <nav id="desktop-nav">
+            <div class="logo"> Westley Valentin</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo"> Westley Valentin</div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                 </div>
             </div>
-        </div>
-
-        <!---------About Section-------->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-column-1">
-                        <img src="IconsAndImages/layers.png">
-                    </div>
-                    <div class="about-column-2">
-                        <h1 class="sub-title">About Me</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Integer laoreet vehicula tortor, vitae congue tortor mattis et. 
-                            Fusce gravida posuere congue. Nunc fringilla velit purus, quis 
-                            bibendum magna lacinia posuere. Duis et urna dictum, hendrerit 
-                            ligula ut, sagittis eros. Morbi aliquet suscipit velit, et 
-                            varius magna mollis fringilla. Maecenas auctor augue vel 
-                            placerat dignissim. Duis tristique ornare placerat. Nullam eget 
-                            lectus et enim sagittis convallis. In eu nisl vitae arcu tristique 
-                            sodales sed id mi. Duis eget ante pharetra, tempor risus eget, fringilla 
-                            sapien. Proin non tellus nec urna dignissim suscipit. Praesent ut lacus 
-                            ac eros sagittis sodales eget id lorem. Ut elementum ornare diam. Mauris 
-                            nunc velit, imperdiet ac neque at, auctor iaculis nunc. Duis non sodales neque.</p>
-                    </div>
+        </nav>
+        <section id="profile">
+            <div class="section_pic-container">
+                <img src="./assets/layers.png" alt="Westley Valentin Pic" />
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="title"> Westley Valentin</h1>
+                <p class="section__text__p2">A Computer Science student at</p>
+                <h2 class="title"> California State University, Sacramento</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color2" 
+                    onClick="window.open('./assets/resume-example.pdf')">Download My Resume!
+                    </button>
+                    <button class="btn btn-color1" 
+                    onClick="location.href='./#contact'">Contact Info
+                    </button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" 
+                    alt="My LinkedIn Profile"
+                    class="icon" 
+                    onClick="location.href='https://linkedin.com/'" 
+                    />
+                    <img src="./assets/github.png" 
+                    alt="My Github Profile"
+                    class="icon" 
+                    onClick="location.href='https://github.com/wesbruh'" />
                 </div>
             </div>
-        </div>
-
+        </section>
+        <script src="script.js"></script>
     </body>
 </html>

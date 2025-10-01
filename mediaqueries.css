@@ -10,3 +10,8 @@ will be provided instead.   */
         display: flex;
     }
 }
+ @media screen {
+    #starfield {
+        max-width: 100vw;
+    }
+ }

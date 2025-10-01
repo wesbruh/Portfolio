@@ -254,3 +254,21 @@ section {
 .btn-container {
     gap: 1rem;
 }
+
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: -1; /* Keeps it behind everything */
+}
+
+.main-content {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.215); /* Optional: semi-transparent bg for readability */
+}
